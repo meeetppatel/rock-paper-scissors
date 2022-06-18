@@ -105,14 +105,21 @@ function game(urchoice){
         playerwincount++;
         document.querySelector('#your_score').textContent =playerwincount;
         document.querySelector('#round_result').textContent = "You WON!";
+        document.querySelector('#yourchoice').textContent = urchoice;
+        document.querySelector('#compchoice').textContent = computerchoice();
+
     }
     else if(playRound(urchoice) === false){
         compwincount++;
         document.querySelector('#comp_score').textContent=compwincount;
         document.querySelector('#round_result').textContent = "You Lost!";
+        document.querySelector('#yourchoice').textContent = urchoice;
+        document.querySelector('#compchoice').textContent = computerchoice();
     }
     else{
         document.querySelector('#round_result').textContent = "It's a TIE!";
+        document.querySelector('#yourchoice').textContent = urchoice;
+        document.querySelector('#compchoice').textContent = computerchoice();
     }
     console.log(playerwincount, compwincount);
     

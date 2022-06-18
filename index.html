@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="style.css">
-    
+
 </head>
 
 <body>
@@ -16,8 +16,16 @@
     </div>
     <div class="container">
         <div class="score-container">
-            <div>Player :  <span id="your_score">0</span></div>
-            <div>Computer :  <span id="comp_score">0</span></div>
+            <div>
+                <div>Player : <span id="your_score">0</span>
+                </div>
+                <span id="yourchoice">?</span>
+            </div>
+            <div>
+                <div>Computer : <span id="comp_score">0</span>
+                </div>
+                <span id="compchoice">?</span>
+            </div>
         </div>
         <div class="score-container"><span id="round_result"></span></div>
         <div class="button-container">
@@ -27,9 +35,9 @@
         </div>
         <div class="result">
             <div id="result"></div>
-            <button id="playagn" class="btns"  onclick="playagain()">Play Again</button>
+            <button id="playagn" class="btns" onclick="playagain()">Play Again</button>
         </div>
-        
+
     </div>
     <script src="script.js"></script>
 </body>

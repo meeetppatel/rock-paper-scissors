@@ -21,23 +21,32 @@ body{
     flex-direction: column;
 }
 .score-container{
-
     justify-content: center;
     display: flex;
     flex-direction: row;
     height: 35px;
+    padding-bottom: 30px;
 }
 .score-container div{
     padding-left: 20px;
+    padding-right: 22px;
+    padding-bottom: 30px;
 }
 
+.button-container{
+    padding-top: 30px;
+}
 .btnson-container{
     height:50px;
 }
 .result{
+    
     padding-top:40px;
 }
 
+#round_result{
+    padding-top:40px;
+}
 
 
 /* .btns {
