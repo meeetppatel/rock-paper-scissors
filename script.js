@@ -87,8 +87,6 @@ function game(urchoice){
     }
     else{
         document.querySelector('#round_result').textContent = "It's a TIE!";
-        document.querySelector('#yourchoice').textContent = urchoice;
-        document.querySelector('#compchoice').textContent = computerchoice();
     }
     console.log(playerwincount, compwincount);
     
