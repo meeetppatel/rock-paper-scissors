@@ -18,11 +18,6 @@ function disableButtons() {
     })
 }
 
-// function playerchoice(yourchoice){
-//     // let playerchoice = prompt('rock/paper/scissors');
-//     console.log(`player's choice "${yourchoice}"`);
-//     return yourchoice;
-// }
 
 function playRound(playerSelection) {
     let computerSelection = computerchoice()
@@ -67,32 +62,6 @@ function playRound(playerSelection) {
     }
 }
 
-
-// function game(playerSelection){
-//     let playerwincount = 0;
-//     let compwincount = 0;
-//     // for (let i = 0; i < 5; i++) {
-        
-//     //     const computerSelection = computerchoice();
-//     //     if(playRound(playerSelection, computerSelection) === -1){
-//     //         break;
-//     //     }
-//     //     else if (playRound(playerSelection, computerSelection)=== true) {
-//     //         playerwincount++;
-//     //     }
-//     //     else if (playRound(playerSelection, computerSelection)=== false){
-//     //         compwincount++;
-//     //     }
-//     // }
-//     // document.querySelector('#your_score').textContent = playerwincount;
-//     // document.querySelector('#comp_score').textContent = compwincount;
-    
-//     if(playerwincount>compwincount){
-//         console.log(`You Won the match! with ${playerwincount}-${compwincount} `);
-//     }else{
-//         console.log(`You Lost the match! with ${playerwincount}-${compwincount}`);
-//     }
-// }
 
 
 let playerwincount = 0;
