@@ -9,7 +9,6 @@ function computerchoice() {
     let options = ['rock', 'paper', 'scissors'];
     let computerchoice = options[Math.floor(Math.random() * options.length)];
     console.log(`computer's choice "${computerchoice}"`);
-    document.querySelector('#compchoice').textContent = computerchoice;
     return computerchoice;
 
 }
@@ -21,10 +20,8 @@ function disableButtons() {
 }
 
 
-function playRound(playerSelection) {
-    let computerSelection = computerchoice()
-
-
+function playRound(playerSelection, computerSelection) {
+    
     if (playerSelection === 'rock' && computerSelection === 'rock') {
         console.log('Tie');
     }
@@ -72,22 +69,19 @@ let compwincount = 0;
 
 function game(urchoice){
     let result = ""
-    if(playRound(urchoice) === true){
+    let computerSelection = computerchoice();
+    if(playRound(urchoice,computerSelection) === true){
         playerwincount++;
         document.querySelector('#your_score').textContent =playerwincount;
         document.querySelector('#round_result').textContent = "You WON!";
-        document.querySelector('#yourchoice').textContent = urchoice;
     }
-    else if(playRound(urchoice) === false){
+    else if(playRound(urchoice,computerSelection) === false){
         compwincount++;
         document.querySelector('#comp_score').textContent=compwincount;
         document.querySelector('#round_result').textContent = "You Lost!";
-        document.querySelector('#yourchoice').textContent = urchoice;
-        
     }
     else{
         document.querySelector('#round_result').textContent = "It's a TIE!";
-        document.querySelector('#yourchoice').textContent = urchoice;
     }
     console.log(playerwincount, compwincount);
     
@@ -105,7 +99,7 @@ function game(urchoice){
         playagainbtn.disabled = false;
         document.getElementById("playagn").style.visibility = "visible";
     }
-
+    document.querySelector('#compchoice').textContent =computerSelection;
 }
 
 
@@ -118,7 +112,7 @@ buttons.forEach(button =>{
     button.addEventListener('click', function(){
         let playerchoice = button.value;
         console.log(`player's choice${button.value}`);
+        document.querySelector('#yourchoice').textContent =playerchoice;
         game(playerchoice);
-
     })
 })
